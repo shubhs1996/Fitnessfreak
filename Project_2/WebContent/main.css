@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+body {margin:0px;
+padding:0px;}
+
+.con {display:inline;
+  width:100%;
+  height:75px;
+  background-color:red;
+  padding:10px;
+  
+  }
+  
+  .con ul li  {display:inline;
+  float:right;
+  font-size:30px;
+  color:white;
+  list-style:none;
+  padding:8px;
+  margin-right:60px;
+  }
+  
+  li a{text-decoration:none;
+  color:white;}
+  
+  li h3 {font-family:Henny Penny;display:inline;margin-right:130px;}
+  
+  
+  
+    .nav {display:inline;
+  width:750px;
+   margin-top:20px;
+
+   position:relative;
+   top:5px;
+
+  height:50px;
+  }
+  .nav a { float:right;
+  text-decoration:none;
+           color:white;
+           font-size:20px; 
+           padding:25px ;
+           opacity:1;
+           background-color:#f2f2f200;
+      margin-right:10px;
+  }
+
+.nav a:hover{background-color:white;
+color:black;}
+  

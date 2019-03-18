@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+
+
+.contact {width:100%;
+  overflow:hidden;
+  background:skyblue;
+  padding:none;
+  
+  
+}
+
+.contact ul{
+	padding:0px;
+	margin:0px;
+	
+}
+
+.contact ul li {
+	list-style:none;
+	float:left;
+	width:20%;
+	height:300px;
+	background:red;
+	margin:40px 40px 0px 55px;
+   box-sizing:boder-box;
+   border:2px solid black;	
+}
+
+@media screen and (max-width:1250px){
+	.contact ul li{
+	width:40%;
+	margin-left:40px;}
+}

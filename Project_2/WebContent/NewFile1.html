@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='project2.css' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Henny Penny' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Rubik Mono One' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0px;padding:0px;}
+.mySlides {display: none}
+img {vertical-align: middle;
+cursor:pointer;}
+.con { z-index:1;max-width:1366px;height:75px;
+padding:5px;position:relative;background-color:#29282d;}
+
+.con a {float:right;
+    padding:20px  20px;
+    font-size:20px;
+    text-decoration:none;
+    color:white;
+   
+  }
+ 
+ 
+
+.slideshow-container {
+  max-width:100%;
+  height:667px;
+  position: relative;
+  top:0px;
+  margin: 0px auto auto auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 60px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 200px;
+  width: 100%;
+  text-align: center;
+  line-height:57px;
+  white-space:nowrap;
+ 
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.img:hover { height:75px;}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+
+
+@keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+
+
+
+
+
+  .trainer { width:100%;
+height:600px; 
+background-color:#29282d;
+background-size: 100% 100%;
+
+  }
+  
+ .gallery { width:100%;
+height:672px; 
+
+background-color:#f2f2f2;}
+
+#features { width:100%;
+height:672px; 
+background-color:#f2f2f2;
+}
+
+  .contact { width:100%;
+height:410px; 
+
+background-color:#f2f2f2;
+}
+  
+.tname,.fname {width:100%;
+        height:100px;
+        position:relative;
+        top:90px;
+          color:white;
+        font-size:65px;
+   text-align:center;
+       letter-spacing: 20px;
+   font-weight:700;}
+   
+   .tpic {width:1200px;
+    height:350px;
+    left:70px;
+     background-color:#f2f2f200;
+     position:relative;
+     top:150px;}
+     .pic-container {display:inline-block;}
+     .text1 {text-align:center;
+     weight:bold;
+     font:italic;
+     font-size:25px;
+     width:250px;
+     position:relative;
+     left:35px;
+     color:white;}
+     
+    .fname {background-color:#f2f2f200;
+      color:#29282d;
+         } 
+         
+         .fcontainer {width:100%;
+        height:auto;
+         position:relative;
+         top:250px;
+  }
+         .chain {width:280px;height:auto;margin-left:50px;display:inline-block;}
+         .fa {font-size:100px;
+         
+             font: normal normal normal 14px/1 FontAwesome;}
+             
+             .ccont { width:300px;
+             height:auto;
+             color:#29282d;
+             font-size:15px;
+            line-height:20px;
+            position:relative;
+            top:30px;}
+            
+            .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:#29282d;
+  font-size:30px;
+}
+
+input[type=text], input[type=password],input[type=email],input[type=tel],input[type=number] {
+    width:418px;
+    padding: 15px;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    border: 1px solid #f2f2f2;
+    background: #f1f1f1;
+}
+input[type=email]:focus, input[type=password]:focus,input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+
+
+  .g {display:inline-block;margin:0px; padding:0px;}
+  .g img {width:283px;height:200px;}
+  
+  #a {margin-right:15px;}
+  
+  .membership {width:100%;
+   height:667px;position:relative;
+    background-color:#29282d;
+   display:inline-block;}
+
+.membox {width:500px;
+        position:absolute;
+        top:0px;
+        right:0px;
+      height:100%;}
+      
+      .membership_1 {width:850px;
+  height:auto;
+ position:absolute;
+  top:50px;
+  color:white;
+  text-align:center;
+  font-size:40px;
+  }
+  
+  
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width:300px;
+    opacity: 0.9;
+}
+  
+  
+
+/*@media only screen and (max-width: 700px){
+.con ul li a{font-size:40%;}
+
+.con ul li div {font-size:50%;}
+
+}*/
+     
+</style>
+</head>
+<body>
+<div class="con" id="headbar">
+<a id="a" href="#contact">Contact</a>
+<a id="a" href="#trainer">Trainer</a>
+<a id="a" href="#hello">Join Us</a>
+<a id="a" href="#features">features</a>
+<a id="a" href="#gallery">Gallery</a>
+
+<a id="a" href="#home">Home</a>
+
+
+
+
+<div class="logo" id="logo" style="font-family:Henny Penny;font-size:33px;width:auto;height:100%;margin:auto 0px auto 10px;color:white;font-size:45px;">FREAK FITNESS</div>
+
+
+
+
+</div>
+<div class="slideshow-container" id="home">
+
+<div class="mySlides fade">
+
+  <img src="fitness.jpeg" class="img" style="width:100%;height:667px">
+<div class="text fade" style=" font-family:'Rubik Mono One';">NO PAIN<BR> NO GAIN</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="fitness4.jpg" class="img" style="width:100%;height:667px">
+<div class="text fade" style=" font-family:'Rubik Mono One';">JUST BELIEVE <BR> IN YOURSELF</div>
+
+</div>
+
+<div class="mySlides fade">
+
+  <img src="fitness2.jpeg" class="img" style="width:100%;height:667px">
+<div class="text fade"style="font-size:60px;bottom:200px; font-family:'Rubik Mono One';">I'm WORKING on MYSELF<BR>for MYSELF by MYSELF...</div>
+
+</div>
+<div class="mySlides fade">
+
+  <img src="fitness1.jpg" class="img" style="width:100%;height:667px">
+<div class="text fade" style="font-size:60px;bottom:100px;position:relative;bottom:300px;left:20px; font-family:'Rubik Mono One';">GOOD THINGS<br>TAKE TIME</div>
+
+</div>
+
+</div>
+
+
+
+<div class="gallery" id="gallery">
+<div class="galleryc" style="background-color:#f2f2f200;max-width:1149px;min-height:608px;position:relative;top:-50px;margin:0 auto;">
+
+<div class="g" style="width:283px;height:200px;background-color:blue;position:absolute;">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="fitness1.jpg" style="width:283px;height:200px;">
+    </div>
+    <div class="flip-box-back">
+      <h2>Specialities</h2>
+      <p>What an amazing Trainer</p>
+    </div>
+  </div>
+</div></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;margin:0px;"><img src="fitness10.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness11.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness12.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness13.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness9.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness1.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness2.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness6.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness2.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness9.jpeg"></div>
+<div class="g" style="width:283px;height:200px;background-color:blue;position:relative;"><img src="fitness.jpeg"></div>
+		</div>
+</div>
+<div class="membership" id="hello">
+<div class="membership_1" style="background-color:#f2f2f200;"><br><br><p style="font-size:25px;text-align:center;">By being a member of Freak Fitness you can get Diet Chart on your Email Id in one click.You can ask any Fitness related question to Our Trainers</p>
+<div style="width:250px;height:170px;background-color:gray;display:inline-block;float:left;margin:150px 0 0 120px;"><div style="width:100%;height:40px;font-size:30px;background-color:black;color:white">Total Members</div><h2 style="font-size:60px;color:white;margin-top:30px;">4576</h2></div>
+<div style="width:250px;height:170px;background-color:gray;display:inline-block;margin:150px 50px 0 0;" ><div style="width:100%;height:40px;font-size:30px;background-color:black;color:white;" >Active Members</div><h2 style="font-size:60px;color:white;margin-top:30px;">4576</h2></div>
+</div>
+<hr style="height:500px;width:2px;position:relative;top:70px;left:180px;">
+<div class="membox">
+<div style="width:100%;position:relative;height:auto;top:20px;font-family:Rubik Mono One;text-align:center;padding:10px;font-size:35px;color:#ff8000;">Be a Member..!</div>
+<div style="width:100%;height:603px;">
+<div style="width:350px;height:auto;padding:5px;position:absolute;top:130px;left:70px;" id="suggest">
+
+<form action="UsubH.jsp?id=9" method="POST">
+
+<input type="text" placeholder="Name" name="sub" value="" required style="width:350px;height:40px;padding:5px;border:2px solid #29282d;box-shadow:1px 1px 2px 2px #29282d;">
+<input type="email" placeholder="email" name="email" value="" required style="width:350px;height:30px;padding:5px;border:2px solid #29282d;box-shadow:1px 1px 2px 2px #29282d;">
+<input type="text" placeholder="Gender" value="" name="gender" style="width:350px;height:30px;padding:5px;border:2px solid #29282d;box-shadow:1px 1px 2px 2px #29282d;" required>
+<input type="tel" placeholder="Contact" value="" name="mobile" style="width:350px;height:30px;padding:5px;border:2px solid #29282d;box-shadow:1px 1px 2px 2px #29282d;" required>
+<input type="number" placeholder="age" value="" min="0"; name="age" style="width:350px;height:40px;padding:5px;border:2px solid #29282d;box-shadow:1px 1px 2px 2px #29282d; " required>
+
+<textarea rows="8" cols="47" name="texta" placeholder="Medical problem" style="background-color:#f1f1f1;color:white;border:2px solid #29282d;box-shadow:1px 1px 2px 2px #29282d;"></textarea>
+<input type="submit" value="Send"  style="width:355px;height:55px;display:block;background-color:orange;border:none;padding:10px;">
+
+</form>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="features" style="max-width:1366;min-height:600px;">
+<div class="fname">FEATURES</div>
+
+<div class="fcontainer">
+<div class="chain">
+<span  style="font-size:70px;color:#29282d;margin-left:100px;" class=" mbr-iconfont fa-chain fa"></span>
+<div class="cquote" style="margin-left:-10px;"><h2 style=" text-align:center; letter-spacing: 5px;font-size:15px;color:#29282d; font-weight:100;">QUALITY EQUIPMENTS</h2><div class="subcq" style="color:#29282d;font-weight:75;text-align:center;">We bought the most modern and safe equipment, and maintain it regularly.</div></div>
+</div>
+<div class="chain">
+<span  style="font-size:70px;color:#29282d;margin-left:100px;" class=" mbr-iconfont fa-edit fa"></span>
+<div class="cquote" style="margin-left:-10px;"><h2 style=" text-align:center; letter-spacing: 5px;font-size:15px;color:#29282d; font-weight:100;">HEALTHY NUTRITION</h2><div class="subcq" style="color:#29282d;font-weight:75;text-align:center;">Our regular nutritionist will help you make up your personal nutrition plan.</div></div>
+</div><div class="chain">
+<span  style="font-size:70px;color:#29282d;margin-left:100px;" class=" mbr-iconfont fa-shower fa"></span>
+<div class="cquote" style="margin-left:-10px;"><h2 style=" text-align:center; letter-spacing: 5px;font-size:15px;color:#29282d; font-weight:100;">SHOWER SERVICE</h2><div class="subcq" style="color:#29282d;font-weight:75;text-align:center;">In our changing rooms are several functioning shower cabins with a water heater.</div></div>
+</div><div class="chain">
+<span  style="font-size:70px;color:#29282d;margin-left:100px;" class=" mbr-iconfont fa-heart fa"></span>
+<div class="cquote" style="margin-left:-10px;"><h2 style=" text-align:center; letter-spacing: 5px;font-size:15px;color:#29282d; font-weight:100;">UNIQUE TO YOUR NEEDS</h2><div class="subcq" style="color:#29282d;font-weight:75;text-align:center;">Enjoy an extensive cardio zone, use our exercise equipment, or join a group program.</div></div>
+</div>
+</div>
+
+</div>
+<div class="trainer" id="trainer">
+
+<div class="tname">TRAINERS</div>
+<div class="tpic" style="width:100%;">
+<div class="pic-container">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="fitness1.jpg" style="width:100%;height:100%;border-radius:50%;margin-top:0px;margin-left:0px;">
+  </div>
+    <div class="flip-box-back">
+      <h2>Specialities</h2>
+      <p>What an amazing Trainer</p>
+    </div>
+  </div>
+</div>
+
+<div class=text1>Name</div>
+</div>
+<div class="pic-container">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="fitness1.jpg" style="width:100%;height:100%;border-radius:50%;margin-top:0px;margin-left:0px;">
+    </div>
+    <div class="flip-box-back">
+ <h2>Specialities</h2>
+      <p>What an amazing Trainer</p>
+    </div>
+  </div>
+</div>
+<div class=text1>Name</div>
+</div>
+<div class="pic-container">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+        <img src="fitness1.jpg" style="width:100%;height:100%;border-radius:50%;margin-top:0px;margin-left:0px;">
+    </div>
+    <div class="flip-box-back">
+     <h2>Specialities</h2>
+      <p>What an amazing Trainer</p>
+    </div>
+  </div>
+</div><div class=text1>Name</div>
+</div>
+<div class="pic-container">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+         <img src="fitness1.jpg" style="width:100%;height:100%;border-radius:50%;margin-top:0px;margin-left:0px;">
+    </div>
+    <div class="flip-box-back">
+    <h2>Specialities</h2>
+      <p>What an amazing Trainer</p>
+    </div>
+  </div>
+</div><div class=text1>Name</div>
+</div>
+</div>
+</div>
+<div class="contact" id="contact" style="background-color:#f2f2f2;max-width:100%;">
+<div style="width:100%;height:auto;display:inline-block;position:relative;">
+<div class="ncontac" style="font-family: 'Henny Penny';font-size:30px;width:240px;position:relative;top:25px;left:20px;color:orange;">FREAK FITNESS</div>
+<div  style="width:240px;position:relative;top:40px;left:20px;color:#29282d;display:inline-block;line-height:30px;"><b>ADDRESS:</b><br>500 South Capitol Avenue, Indianapolis, IN 46225, USA <br><b>TELEPHONE:</b><br>+123 555 1234<br><b>FAX:</b><br>+123 555 3000<br><b>EMAIL:</b><br>hi@fitness.com</div>
+<div  style="width:100%px;position:absolute;top:90px;left:350px;color:#29282d;display:inline-block;line-height:30px;height:auto;"><b>OPERATING HOURS:</b><br>Monday to Friday :- 10h00 to 23h00.<br> Saturdays:- 12h00 to 00h00.<br> Sundays :-14h00 to 22h00.<br> Closed on public holidays.<br></div>
+<div style="width:280px;height:100px;position:absolute;top:70px;display:inline-block;margin-left:420px;">
+<h3 style="text-align:center;padding:2px;color:#29282d;">follow us on:</h3>
+<div style="position:absolute;height:50px;width:280px;margin-top:-10px;align:center;">
+<span  style="font-size:50px;color:#29282d;margin-left:30px;" class=" mbr-iconfont fa-facebook fa"></span>
+<span  style="font-size:50px;color:#29282d;margin-left:30px;" class=" mbr-iconfont fa-twitter fa"></span>
+<span  style="font-size:50px;color:#29282d;margin-left:30px;" class=" mbr-iconfont fa-instagram	 fa"></span>
+</div></div>
+<div style="width:360px;height:auto;display:inline-block;position:absolute;top:20px;right:40px;">
+<h2 style="color:#29282d;text-align:center;">STAY CONNECTED</h2>
+<div style="width:365px;height:auto;padding:5px;border:1px solid #29282d;" id="suggest">
+
+<form action="UsubH.jsp?id=9" method="POST">
+
+<input type="text" placeholder="Name" name="sub" value="" required style="width:350px;height:30px;padding:5px;border:1px solid #29282d50;">
+<input type="email" placeholder="email" name="email" value="" required style="width:350px;height:30px;padding:5px;border:1px solid #29282d50;">
+
+<textarea rows="12" cols="47"	" name="texta" placeholder="enter your Question" style="background-color:#f2f2f200;color:white;"></textarea>
+<input type="submit" value="Send"  style="width:180px;height:25px;display:block;background-color:orange;border:none;">
+
+</form>
+</div></div>
+
+</div>
+</div>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("headbar").style.position = "fixed";
+    document.getElementById("headbar").style.width = "100%";
+    document.getElementById("headbar").style.height = "75px";
+    document.getElementById("headbar").style.backgroundColor = "#e27b16";
+    document.getElementById("a").style.fontSize = "20px";
+
+   
+  } else {
+    document.getElementById("headbar").style.position = "relative";
+    document.getElementById("headbar").style.backgroundColor = "#29282d";
+  }
+}
+
+
+
+</script>
+
+</body>
+</html> 
